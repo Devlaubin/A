@@ -1,0 +1,22 @@
+{
+  "name": "a",
+  "version": "1.0.0",
+  "description": "Navigateur A",
+  "main": "main.js",
+  "author": "Aubin",
+  "scripts": {
+    "start": "electron .",
+    "build": "electron-builder"
+  },
+  "devDependencies": {
+    "electron": "^26.0.12",
+    "electron-builder": "^24.9.1"
+  },
+  "build": {
+    "appId": "com.aubin.a",
+    "productName": "A",
+    "win": {
+      "target": "nsis"
+    }
+  }
+}

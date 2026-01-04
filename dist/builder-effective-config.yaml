@@ -1,0 +1,9 @@
+directories:
+  output: dist
+  buildResources: build
+appId: com.aubin.a
+productName: A
+win:
+  target: nsis
+files: []
+electronVersion: 26.6.10
