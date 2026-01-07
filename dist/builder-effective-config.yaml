@@ -3,7 +3,15 @@ directories:
   buildResources: build
 appId: com.aubin.a
 productName: A
+asar: true
 win:
-  target: nsis
+  target:
+    - target: nsis
+      arch:
+        - x64
+publish:
+  - provider: github
+    owner: Devlaubin
+    repo: A
 files: []
-electronVersion: 26.6.10
+electronVersion: 28.3.3

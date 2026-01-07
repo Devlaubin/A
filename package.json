@@ -2,21 +2,40 @@
   "name": "a",
   "version": "1.0.0",
   "description": "Navigateur A",
-  "main": "main.js",
   "author": "Aubin",
+  "main": "main.js",
   "scripts": {
     "start": "electron .",
     "build": "electron-builder"
   },
-  "devDependencies": {
-    "electron": "^26.0.12",
-    "electron-builder": "^24.9.1"
-  },
   "build": {
     "appId": "com.aubin.a",
     "productName": "A",
+    "asar": true,
     "win": {
-      "target": "nsis"
-    }
+      "target": [
+        {
+          "target": "nsis",
+          "arch": [
+            "x64"
+          ]
+        }
+      ]
+    },
+    "publish": [
+      {
+        "provider": "github",
+        "owner": "Devlaubin",
+        "repo": "A"
+      }
+    ]
+  },
+  "dependencies": {
+    "dotenv": "^17.2.3",
+    "electron-updater": "^6.7.3"
+  },
+  "devDependencies": {
+    "electron": "^28.0.0",
+    "electron-builder": "^24.13.3"
   }
 }
